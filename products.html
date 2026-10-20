@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Interior E-Decor Shop</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>INTERIOR E-DECOR SHOP</h1>
+        <p>Luxury Decor for Beautiful Living</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-content">
+
+        <h2>Our Products</h2>
+        <p>Discover elegant furniture and beautiful decorations for your home.</p>
+
+        <div class="notice">
+            Items in Cart: <strong id="cart-count">0</strong>
+            &nbsp; | &nbsp;
+            Total: <strong id="cart-total">₹0</strong>
+        </div>
+
+        <!-- Products Grid -->
+        <section class="product-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="../images/lamp.jpeg" alt="Decorative table lamp">
+                <h3>Luxury Table Lamp</h3>
+                <p>Elegant lighting for your bedroom and living room.</p>
+                <h4>₹1,499</h4>
+                <button type="button"
+                    onclick="addToCart('Luxury Table Lamp', 1499)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="../images/sofa.jpeg" alt="Modern luxury sofa">
+                <h3>Modern Luxury Sofa</h3>
+                <p>A comfortable sofa with a stylish modern design.</p>
+                <h4>₹12,999</h4>
+                <button type="button"
+                    onclick="addToCart('Modern Luxury Sofa', 12999)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="../images/table.jpeg" alt="Decorative wooden table">
+                <h3>Designer Coffee Table</h3>
+                <p>A beautiful table to enhance your living space.</p>
+                <h4>₹3,499</h4>
+                <button type="button"
+                    onclick="addToCart('Designer Coffee Table', 3499)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="../images/bedroom.jpeg" alt="Elegant bedroom decor">
+                <h3>Bedroom Decor Set</h3>
+                <p>Create a peaceful and luxurious bedroom atmosphere.</p>
+                <h4>₹5,999</h4>
+                <button type="button"
+                    onclick="addToCart('Bedroom Decor Set', 5999)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="../images/living-room.jpeg" alt="Modern living room decor">
+                <h3>Living Room Decor</h3>
+                <p>Give your living room a fresh and elegant appearance.</p>
+                <h4>₹7,499</h4>
+                <button type="button"
+                    onclick="addToCart('Living Room Decor', 7499)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="../images/wall-art.jpeg" alt="Decorative wall art">
+                <h3>Premium Wall Art</h3>
+                <p>Add beauty and personality to your walls.</p>
+                <h4>₹2,499</h4>
+                <button type="button"
+                    onclick="addToCart('Premium Wall Art', 2499)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </section>
+
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="../index.html" class="back-link">← Back to Home</a>
+        </p>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Interior E-Decor Shop. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Add to Cart Script -->
+    <script>
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        function addToCart(productName, price) {
+            cartCount++;
+            cartTotal += price;
+
+            document.getElementById("cart-count").textContent = cartCount;
+            document.getElementById("cart-total").textContent =
+                "₹" + cartTotal.toLocaleString("en-IN");
+
+            alert(productName + " added to your cart!");
+        }
+    </script>
+
+</body>
+</html>

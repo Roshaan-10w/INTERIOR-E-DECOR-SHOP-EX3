@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Interior E-Decor Shop</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>INTERIOR E-DECOR SHOP</h1>
+        <p>Luxury Decor for Beautiful Living</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-content">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Have questions about our products or home decor collections?
+            Send us a message. We would love to hear from you!
+        </p>
+
+        <!-- Contact Details -->
+        <section class="about-section">
+            <h3>Get in Touch</h3>
+            <p><strong>Shop Name:</strong> Interior E-Decor Shop</p>
+            <p><strong>Email:</strong> support@interioredecor.example</p>
+            <p><strong>Business Hours:</strong> Monday - Saturday, 9 AM - 6 PM</p>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="about-section">
+            <h3>Send Us a Message</h3>
+
+            <form id="contactForm" class="contact-form">
+
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+                <label for="subject">Subject</label>
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Enter the subject"
+                    required
+                >
+
+                <label for="message">Your Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Type your message here..."
+                    required
+                ></textarea>
+
+                <button type="submit">Submit Message</button>
+
+            </form>
+
+            <!-- Confirmation Message -->
+            <div id="successMessage" class="notice" hidden>
+                <h3>Message Submitted Successfully!</h3>
+                <p>Thank you for contacting Interior E-Decor Shop.</p>
+                <button type="button" id="sendAnother">
+                    Send Another Message
+                </button>
+            </div>
+
+        </section>
+
+        <p style="text-align: center; margin-top: 25px;">
+            <a href="../index.html" class="back-link">
+                ← Back to Home
+            </a>
+        </p>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Interior E-Decor Shop. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Form Script -->
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const successMessage = document.getElementById("successMessage");
+        const sendAnother = document.getElementById("sendAnother");
+
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            contactForm.hidden = true;
+            successMessage.hidden = false;
+        });
+
+        sendAnother.addEventListener("click", function() {
+            contactForm.reset();
+            successMessage.hidden = true;
+            contactForm.hidden = false;
+        });
+    </script>
+
+</body>
+</html>
